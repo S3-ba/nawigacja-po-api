@@ -1,8 +1,8 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Contact } from './pages/Contact';
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import { Menu } from './pages/Menu';
+import { Duckk } from './pages/duck';
+import { Navbar } from './assets/components/Navbar';
 
 
 function App() {
@@ -10,10 +10,10 @@ function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/menu' element={<Menu />}/>
-          <Route path='/contact' element={<Contact />}/>          
+          <Route path='/menu' element={<Menu />}/> 
+          <Route path='/duck' element={<Duckk />}/>      
         </Routes>
       </Router>
     </>
